@@ -1,7 +1,14 @@
 
+/* Map section */
 .col-12.col-md-10 {
   padding: 0;
 }
+
 #map {
   height: 90vh;
+}
+
+/* Place list section */
+.place-list {
+  list-style-type: none;
 }
