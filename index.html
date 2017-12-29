@@ -17,8 +17,8 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 col-md-2" id>
-          <ul class="place-list">
-            <li class="text-center">Text 1</li>
+          <ul class="place-list" data-bind="foreach: arrayList">
+            <li class="text-center" data-bind="text: name"></li>
           </ul>
 
         </div>
