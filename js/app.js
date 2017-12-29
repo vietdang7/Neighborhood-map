@@ -44,11 +44,16 @@ var placeList = [
 function ViewModel() {
   var self = this;
 
+  // Create arrayList
+  self.arrayList = ko.observableArray([]);
+
   // Setup Helsinki Map
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 60.169856, lng: 24.938379},
     zoom: 15
   });
+
+
 }
 
 // Start app with knockoutjs
