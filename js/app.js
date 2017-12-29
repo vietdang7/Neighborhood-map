@@ -53,6 +53,10 @@ function ViewModel() {
     zoom: 15
   });
 
+  // Push placeList to arrayList
+  placeList.forEach(function(placeItem){
+       self.arrayList.push(placeItem);
+   });
 
 }
 
