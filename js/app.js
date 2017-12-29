@@ -4,6 +4,10 @@ var map;
 // Create a variable for Place
 var place;
 
+// Create variables for clientID & secret key of Foursquare
+var clientID;
+var clientSecret;
+
 // Variable for Places list
 var placeList = [
   {
