@@ -40,11 +40,18 @@ var placeList = [
   },
 ]
 
-// Function to initialize the map within the map div
-function initMap() {
- map = new google.maps.Map(document.getElementById('map'), {
-   center: {lat: 60.169856, lng: 24.938379},
-   zoom: 20
- });
+// The ViewModel
+function ViewModel() {
+  var self = this;
 
+  // Setup Helsinki Map
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 60.169856, lng: 24.938379},
+    zoom: 20
+  });
+}
+
+// Start app with knockoutjs
+function initApp(){
+  ko.applyBindings(new ViewModel());
 }
