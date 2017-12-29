@@ -11,4 +11,5 @@
 /* Place list section */
 .place-list {
   list-style-type: none;
+  padding: 0;
 }
