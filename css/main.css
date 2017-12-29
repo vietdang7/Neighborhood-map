@@ -1,4 +1,7 @@
 
+.col-12.col-md-9 {
+  padding: 0;
+}
 #map {
   height: 90vh;
 }
