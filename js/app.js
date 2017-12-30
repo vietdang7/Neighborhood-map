@@ -118,11 +118,12 @@ place = function(data){
 
       self.infoWindow.open(map, this);
 
-      self.active = function(place){
-        google.maps.event.trigger(self.marker, 'click');
-      };
+
 
     });
+    self.active = function(place){
+      google.maps.event.trigger(self.marker, 'click');
+    };
 };
 
 // The ViewModel
