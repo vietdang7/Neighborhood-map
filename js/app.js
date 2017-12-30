@@ -94,6 +94,7 @@ place = function(data){
       position: new google.maps.LatLng(self.lat, self.long),
       map: map,
       title: self.name
+      animation: google.maps.Animation.DROP
     });
 
     // show marker if visible is TRUE
