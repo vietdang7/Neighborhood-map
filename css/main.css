@@ -13,3 +13,8 @@
   list-style-type: none;
   padding: 0;
 }
+
+/* Search area */
+.search-area {
+  margin-top: 20px;
+}
