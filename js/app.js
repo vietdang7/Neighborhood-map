@@ -95,6 +95,16 @@ place = function(data){
       map: map,
       title: self.name
     });
+
+    // show marker if visible is TRUE
+    self.showMarker = ko.computed(function() {
+		if(self.visible() === true) {
+			self.marker.setMap(map);
+		} else {
+			self.marker.setMap(null);
+		}
+		return true;
+	}, self);
 }
 
 // The ViewModel
