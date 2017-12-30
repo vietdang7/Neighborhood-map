@@ -147,6 +147,25 @@ function ViewModel() {
        self.arrayList.push(new place(placeItem));
    });
 
+  // Create resultList
+  self.resultList = ko.computed(function(){
+    // Create variable to store searchInput in lowercase format
+    var term = self.searchInput().toLowerCase();
+    if (!term) {
+      self.arrayList().forEach(function(placeItem){
+				placeItem.visible(true);
+			});
+			return self.arrayList();
+    } else {
+      return ko.utils.arrayFilter(self.arrayList(), function(placeItem) {
+				var string = placeItem.name.toLowerCase();
+				var result = (string.search(filter) >= 0);
+				placeItem.visible(result);
+				return result;
+			});
+    }
+  },self);
+
 }
 
 // Start app with knockoutjs
