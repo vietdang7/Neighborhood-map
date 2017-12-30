@@ -130,6 +130,9 @@ place = function(data){
 function ViewModel() {
   var self = this;
 
+  // Create observable searchInput with empty string
+  self.searchInput = ko.observable('');
+
   // Create arrayList
   self.arrayList = ko.observableArray([]);
 
