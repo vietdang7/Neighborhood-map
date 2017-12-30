@@ -68,13 +68,13 @@ place = function(data){
   // Request data from FourSquare and stored in related variables
   $.getJSON(foursquareURL).done(function (data) {
         var responses = data.response.venues[0];
-        self.URL = results.url;
+        self.URL = responses.url;
         if (typeof self.URL === 'undefined') {
             self.URL = "";
         }
-        self.street = results.location.formattedAddress[0] || 'No Address Provided';
-        self.city = results.location.formattedAddress[1] || 'No Address Provided';
-        self.phone = results.contact.phone || 'No Phone Provided';
+        self.street = responses.location.formattedAddress[0] || 'No Address Provided';
+        self.city = responses.location.formattedAddress[1] || 'No Address Provided';
+        self.phone = responses.contact.phone || 'No Phone Provided';
     }).fail(function () {
         $('.place-list').html('There was an error with the Foursquare API. Please reload the page!.');
     });
