@@ -1,5 +1,6 @@
 # Neighborhood-map
 Final project of part 4 - Udacity FullStack Nanodegree - Neighborhood Map of Helsinki 
+![Web App Demo](https://github.com/vietdang7/Neighborhood-map/blob/master/img/demo.png)
 
 ## Code Example
 Here are some lines of example code:
