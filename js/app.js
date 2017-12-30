@@ -79,6 +79,16 @@ place = function(data){
         $('.place-list').html('There was an error with the Foursquare API. Please reload the page!.');
     });
 
+    // Content of infowindow
+    self.htmlContent = '<div class="info-window-content"><div class="title"><b>' + self.name + '</b></div>' +
+        '<div class="content"><a href="' + self.URL +'">' + self.URL + '</a></div>' +
+        '<div class="content">' + self.street + '</div>' +
+        '<div class="content">' + self.city + '</div>' +
+        '<div class="content">' + self.phone + '</div></div>';
+
+    // Add content to infowindow
+    self.infoWindow = new google.maps.InfoWindow({content: self.htmlContent});      
+
 }
 
 // The ViewModel
