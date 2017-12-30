@@ -87,8 +87,14 @@ place = function(data){
         '<div class="content">' + self.phone + '</div></div>';
 
     // Add content to infowindow
-    self.infoWindow = new google.maps.InfoWindow({content: self.htmlContent});      
+    self.infoWindow = new google.maps.InfoWindow({content: self.htmlContent});
 
+    // Create marker
+    self.marker = new google.maps.Marker({
+      position: new google.maps.LatLng(self.lat, self.long),
+      map: map,
+      title: self.name
+    });
 }
 
 // The ViewModel
