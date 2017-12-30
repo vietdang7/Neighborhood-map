@@ -93,7 +93,7 @@ place = function(data){
     self.marker = new google.maps.Marker({
       position: new google.maps.LatLng(self.lat, self.long),
       map: map,
-      title: self.name
+      title: self.name,
       animation: google.maps.Animation.DROP
     });
 
