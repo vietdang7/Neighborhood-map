@@ -44,6 +44,43 @@ var placeList = [
   },
 ]
 
+// Foursquare Setup
+place = function(data){
+  var self = this;
+  self.name = data.name;
+  self.lat = data.lat;
+  self.long = data.long;
+  self.URL = '';
+  self.street = '';
+  self.city = '';
+  self.phone = '';
+
+  // value TRUE for visible of place item
+  self.visible = ko.observable(true);
+
+  // Foursquare ID and clientSecret
+  clientID = 'LCWXFEE2AYQ4AQQHCSVVYHKYFADEDM2R1XKOKTIB4OLWN3NZ';
+  clientSecret = 'FZRFCVP2MZ3KA1EIR3VDCFSKZFUQCXJPAYSEAOI131CGHKEN'
+
+  // Foursquare URL
+  var foursquareURL = 'https://api.foursquare.com/v2/venues/search?ll=' + self.lat + ',' + self.long + '&client_id=' + clientID + '&client_secret=' + clientSecret + '&v=20171230' + '&query=' + self.name;
+
+  // Request data from FourSquare and stored in related variables
+  $.getJSON(foursquareURL).done(function (data) {
+        var responses = data.response.venues[0];
+        self.URL = results.url;
+        if (typeof self.URL === 'undefined') {
+            self.URL = "";
+        }
+        self.street = results.location.formattedAddress[0] || 'No Address Provided';
+        self.city = results.location.formattedAddress[1] || 'No Address Provided';
+        self.phone = results.contact.phone || 'No Phone Provided';
+    }).fail(function () {
+        $('.place-list').html('There was an error with the Foursquare API. Please reload the page!.');
+    });
+
+}
+
 // The ViewModel
 function ViewModel() {
   var self = this;
