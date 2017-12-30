@@ -19,9 +19,9 @@
         <div class="col-12 col-md-2" id>
           <div class="search-area">
             <p>Enter search keyword!</p>
-            <input type="text" >
+            <input type="text" data-bind="textInput: searchInput, valueUpdate: 'afterkeydown'" >
           </div>
-          <ul class="place-list" data-bind="foreach: arrayList">
+          <ul class="place-list" data-bind="foreach: resultList">
             <li class="text-center" data-bind="text: name, click: active"></li>
           </ul>
 

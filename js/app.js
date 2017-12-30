@@ -159,7 +159,7 @@ function ViewModel() {
     } else {
       return ko.utils.arrayFilter(self.arrayList(), function(placeItem) {
 				var string = placeItem.name.toLowerCase();
-				var result = (string.search(filter) >= 0);
+				var result = (string.search(term) >= 0);
 				placeItem.visible(result);
 				return result;
 			});
