@@ -14,6 +14,11 @@
   padding: 0;
 }
 
+.place-text {
+  margin: 7px auto;
+
+}
+
 /* Search area */
 .search-area {
   margin-top: 20px;
