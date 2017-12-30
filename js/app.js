@@ -104,8 +104,23 @@ place = function(data){
 			self.marker.setMap(null);
 		}
 		return true;
-	}, self);
-}
+	  }, self);
+
+    // evenlistener for Marker
+    self.marker.addListener('click', function(){
+      self.htmlContent = '<div class="info-window-content"><div class="title"><b>' + self.name + '</b></div>' +
+          '<div class="content"><a href="' + self.URL +'">' + self.URL + '</a></div>' +
+          '<div class="content">' + self.street + '</div>' +
+          '<div class="content">' + self.city + '</div>' +
+          '<div class="content">' + self.phone + '</div></div>';
+
+      self.infoWindow.setContent(self.htmlContent);
+
+      self.infoWindow.open(map, this);
+
+
+    });
+};
 
 // The ViewModel
 function ViewModel() {
