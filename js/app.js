@@ -137,7 +137,7 @@ function ViewModel() {
 
   // Push placeList to arrayList
   placeList.forEach(function(placeItem){
-       self.arrayList.push(placeItem);
+       self.arrayList.push(new place(placeItem));
    });
 
 }
