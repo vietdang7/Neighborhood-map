@@ -95,7 +95,7 @@ At the beginning, the web app will show a list of 7 shopping centers and markets
 1.  Open `http://locahost:8888/Neighborhood-map-master` in your browser to test application
 
 ## Modification
-You can add more places by edit placeList array.
+You can add more places by edit `placeList` array.
 
 ## Built With
 - KnockOutJS
