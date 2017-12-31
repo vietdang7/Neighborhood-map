@@ -121,6 +121,11 @@ Place = function(data){
 
       // Set animation for marker when click
       self.marker.setAnimation(google.maps.Animation.BOUNCE);
+
+      setTimeout(function() {
+            self.marker.setAnimation(null);
+        }, 1100);
+
     });
     self.active = function(place){
       google.maps.event.trigger(self.marker, 'click');
