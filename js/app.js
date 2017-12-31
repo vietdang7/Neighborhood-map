@@ -174,6 +174,11 @@ function ViewModel() {
 
 }
 
+// Error handler.
+function errorHandler() {
+    $('#map').html('There is error while loading Google Maps. Please reload your browser.');
+}
+
 // Start app with knockoutjs
 function initApp(){
   ko.applyBindings(new ViewModel());
