@@ -119,8 +119,8 @@ Place = function(data){
 
       self.infoWindow.open(map, this);
 
-
-
+      // Set animation for marker when click
+      self.marker.setAnimation(google.maps.Animation.BOUNCE);
     });
     self.active = function(place){
       google.maps.event.trigger(self.marker, 'click');
