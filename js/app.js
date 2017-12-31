@@ -2,7 +2,7 @@
 var map;
 
 // Create a variable for Place
-var place;
+var Place;
 
 // Create variables for clientID & secret key of Foursquare
 var clientID;
@@ -45,7 +45,7 @@ var placeList = [
 ]
 
 // Foursquare Setup
-place = function(data){
+Place = function(data){
   var self = this;
   self.name = data.name;
   self.lat = data.lat;
@@ -145,7 +145,7 @@ function ViewModel() {
 
   // Push placeList to arrayList
   placeList.forEach(function(placeItem){
-       self.arrayList.push(new place(placeItem));
+       self.arrayList.push(new Place(placeItem));
    });
 
   // Create resultList
