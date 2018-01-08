@@ -59,8 +59,8 @@ Place = function(data){
   self.visible = ko.observable(true);
 
   // Foursquare ID and clientSecret
-  clientID = 'LCWXFEE2AYQ4AQQHCSVVYHKYFADEDM2R1XKOKTIB4OLWN3NZ';
-  clientSecret = 'FZRFCVP2MZ3KA1EIR3VDCFSKZFUQCXJPAYSEAOI131CGHKEN'
+  clientID = 'YOUR_ID';
+  clientSecret = 'YOUR_SECRET'
 
   // Foursquare URL
   var foursquareURL = 'https://api.foursquare.com/v2/venues/search?ll=' + self.lat + ',' + self.long + '&client_id=' + clientID + '&client_secret=' + clientSecret + '&v=20171230' + '&query=' + self.name;
